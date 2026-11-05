@@ -1,145 +1,1340 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ProDrop NL — Privacybeleid</title>
-  <meta name="description" content="Privacybeleid van ProDrop NL.">
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+
+  <meta name="description"
+        content="Privacybeleid van ProDrop NL. Lees hoe wij omgaan met Discord-gegevens, Premium-toegang, PayPal-betalingen en persoonsgegevens.">
+
+  <title>Privacybeleid | ProDrop NL</title>
+
   <style>
-    :root { --bg:#0b1020; --card:#121a2d; --text:#eef2ff; --muted:#aab3c5; --accent:#7c5cff; --border:#27324d; }
-    * { box-sizing:border-box; }
-    body { margin:0; font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:linear-gradient(180deg,#0b1020 0%,#0f1628 100%); color:var(--text); line-height:1.7; }
-    header { padding:48px 20px 28px; text-align:center; }
-    header h1 { margin:0 0 8px; font-size:clamp(2rem,5vw,3rem); }
-    header p { margin:0; color:var(--muted); }
-    nav { text-align:center; padding:0 20px 24px; }
-    nav a { color:#c9c1ff; text-decoration:none; margin:0 10px; }
-    main { max-width:900px; margin:0 auto; padding:0 20px 60px; }
-    section { background:rgba(18,26,45,.9); border:1px solid var(--border); border-radius:16px; padding:24px; margin:16px 0; box-shadow:0 10px 30px rgba(0,0,0,.12); }
-    h2 { margin-top:0; font-size:1.35rem; }
-    h3 { font-size:1rem; }
-    a { color:#a99aff; }
-    .note { border-left:4px solid var(--accent); padding:12px 16px; background:#171f35; border-radius:8px; color:#dce2f3; }
-    footer { text-align:center; color:var(--muted); padding:30px 20px 50px; font-size:.9rem; }
-    table { width:100%; border-collapse:collapse; margin-top:10px; }
-    th,td { text-align:left; vertical-align:top; padding:12px; border-bottom:1px solid var(--border); }
-    th { color:#d9d4ff; }
+    :root {
+      color-scheme: dark;
+      --bg: #080e1b;
+      --card: #111b2e;
+      --text: #edf3ff;
+      --muted: #a3b2c9;
+      --accent: #38bdf8;
+      --border: #26364e;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system,
+        BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.75;
+    }
+
+    .container {
+      width: min(920px, calc(100% - 32px));
+      margin: 40px auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .brand {
+      color: var(--accent);
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 10px 0;
+      font-size: clamp(28px, 5vw, 40px);
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    nav a {
+      padding: 10px 18px;
+      color: var(--text);
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    nav a:hover,
+    nav a.active {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    main {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: clamp(20px, 5vw, 42px);
+    }
+
+    section {
+      margin-bottom: 34px;
+    }
+
+    section:last-child {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      color: var(--accent);
+      font-size: 19px;
+      margin: 0 0 14px;
+      line-height: 1.4;
+    }
+
+    h3 {
+      font-size: 16px;
+      margin: 18px 0 8px;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    ul {
+      padding-left: 22px;
+      margin: 10px 0 16px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: var(--accent);
+      overflow-wrap: anywhere;
+    }
+
+    .highlight {
+      background: rgba(56, 189, 248, 0.07);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 12px;
+      padding: 18px 22px;
+      margin: 18px 0;
+    }
+
+    .highlight strong {
+      color: var(--accent);
+    }
+
+    .notice {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin: 18px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    footer {
+      padding: 26px 12px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    footer a {
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin: 20px auto;
+      }
+
+      nav a {
+        flex: 1;
+        text-align: center;
+      }
+
+      .highlight {
+        padding: 16px;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <header>
-    <h1>ProDrop NL</h1>
-    <p>Privacybeleid</p>
-  </header>
-  <nav>
-    <a href="terms.html">Servicevoorwaarden</a>
-    <a href="privacy.html">Privacybeleid</a>
-  </nav>
+  <div class="container">
 
-  <main>
-    <section>
-      <h2>1. Wie is verantwoordelijk?</h2>
-      <p><strong>Verwerkingsverantwoordelijke:</strong> [Michael Roelofs]</p>
-      <p><strong>Contact:</strong> <a href="mailto:[JOUW-E-MAILADRES]">[JOUW-E-MAILADRES]</a></p>
-      <p>Dit privacybeleid beschrijft hoe ProDrop NL persoonsgegevens verwerkt in verband met de Discord-app/bot en de bijbehorende Premium-functies.</p>
-    </section>
+    <header>
+      <div class="brand">ProDrop NL</div>
 
-    <section>
-      <h2>2. Welke gegevens verwerken we?</h2>
-      <p>ProDrop NL probeert zo weinig mogelijk persoonsgegevens te gebruiken. Afhankelijk van de functies die je gebruikt, kunnen we de volgende gegevens verwerken:</p>
-      <table>
-        <thead><tr><th>Gegeven</th><th>Waarom</th></tr></thead>
-        <tbody>
-          <tr><td>Discord User ID</td><td>Om jouw Discord-account te herkennen en persoonlijke functies, zoals een prijsgrens, aan jouw account te koppelen.</td></tr>
-          <tr><td>Discord gebruikersnaam/display name</td><td>Voor gebruik in interacties met de bot en, waar nodig, om je te identificeren binnen de dienst.</td></tr>
-          <tr><td>Premium-status / entitlement / rolstatus</td><td>Om te bepalen welke Premium-functionaliteit je mag gebruiken.</td></tr>
-          <tr><td>Persoonlijke PS5 Pro prijsgrens</td><td>Om meldingen te kunnen sturen wanneer een gevonden prijs jouw ingestelde grens bereikt of onderschrijdt.</td></tr>
-          <tr><td>Technische gebruiks- en foutinformatie</td><td>Om de dienst te beveiligen, storingen te onderzoeken en de bot te onderhouden.</td></tr>
-        </tbody>
-      </table>
-      <div class="note"><strong>Betaalgegevens:</strong> ProDrop NL vraagt niet om je volledige betaalkaartgegevens. Wanneer betaling via een externe betaalprovider of Discord verloopt, verwerkt die partij de betaalgegevens volgens zijn eigen voorwaarden en privacybeleid.</div>
-    </section>
+      <h1>Privacybeleid</h1>
 
-    <section>
-      <h2>3. Waarom verwerken we deze gegevens?</h2>
-      <p>We verwerken persoonsgegevens voor de volgende doeleinden:</p>
-      <ul>
-        <li>het uitvoeren en beveiligen van de Discord-bot;</li>
-        <li>het leveren van Premium-functies die je gebruikt;</li>
-        <li>het bewaren en toepassen van jouw persoonlijke prijsgrens;</li>
-        <li>het voorkomen en onderzoeken van misbruik, fraude en technische problemen;</li>
-        <li>het voldoen aan wettelijke verplichtingen wanneer dat nodig is.</li>
-      </ul>
-    </section>
+      <p class="subtitle">
+        Hoe ProDrop NL omgaat met jouw
+        persoonsgegevens, Discord-gegevens
+        en PayPal-betalingen.
+      </p>
 
-    <section>
-      <h2>4. Rechtsgrondslagen</h2>
-      <p>Afhankelijk van de verwerking baseren we persoonsgegevens op een of meer van de volgende AVG-grondslagen:</p>
-      <ul>
-        <li><strong>Uitvoering van een overeenkomst:</strong> wanneer de verwerking nodig is om ProDrop-functies of een Premium-dienst te leveren.</li>
-        <li><strong>Gerechtvaardigd belang:</strong> bijvoorbeeld voor beveiliging, fraudepreventie, foutopsporing en het verbeteren van de betrouwbaarheid van de dienst, waarbij we de belangen en rechten van gebruikers meewegen.</li>
-        <li><strong>Wettelijke verplichting:</strong> wanneer wij gegevens moeten bewaren of verstrekken op grond van de wet.</li>
-      </ul>
-      <p>De AVG verlangt dat organisaties duidelijk informeren over doeleinden, grondslagen, ontvangers en bewaartermijnen van persoonsgegevens.</p>
-    </section>
+      <nav aria-label="Juridische navigatie">
+        <a href="index.html">Overzicht</a>
 
-    <section>
-      <h2>5. Met wie delen we gegevens?</h2>
-      <p>Wij delen persoonsgegevens alleen wanneer dat nodig is voor de dienst, een wettelijke verplichting bestaat of een passende grondslag aanwezig is. Afhankelijk van de gebruikte dienstverlening kunnen dit categorieën van ontvangers zijn:</p>
-      <ul>
-        <li><strong>Discord:</strong> ProDrop NL werkt binnen het Discord-platform en gebruikt gegevens die via Discord beschikbaar worden gesteld.</li>
-        <li><strong>Hosting- en infrastructuurproviders:</strong> voor het draaien van de bot en het opslaan van noodzakelijke configuratiegegevens.</li>
-        <li><strong>Betaalproviders / platformexploitanten:</strong> wanneer Premium via een externe betaalomgeving wordt aangeschaft.</li>
-      </ul>
-      <p>We verkopen persoonsgegevens niet.</p>
-    </section>
+        <a href="terms.html">
+          Servicevoorwaarden
+        </a>
 
-    <section>
-      <h2>6. Gegevens van retailers</h2>
-      <p>De bot verzamelt voorraad- en prijsinformatie van externe retailers om alerts te kunnen genereren. Dit betekent niet dat ProDrop NL automatisch persoonsgegevens uit die retailerwebsites opslaat of gebruikt. De monitoring is gericht op product- en beschikbaarheidsinformatie over de PlayStation 5 Pro.</p>
-    </section>
+        <a href="privacy.html"
+           class="active"
+           aria-current="page">
+          Privacybeleid
+        </a>
+      </nav>
+    </header>
 
-    <section>
-      <h2>7. Bewaartermijnen</h2>
-      <p>We bewaren persoonsgegevens niet langer dan nodig is voor het doel waarvoor ze zijn verzameld, tenzij een langere bewaartermijn wettelijk verplicht is. Persoonlijke prijsgrenzen worden bewaard zolang ze nodig zijn voor de prijsgrensfunctie en kunnen door de gebruiker worden verwijderd via de daarvoor beschikbare botfunctie.</p>
-      <p>Wanneer Premium-toegang eindigt, kan bijbehorende Premium-toegangsdata worden verwijderd of gedeactiveerd. Technische logs kunnen korter of langer worden bewaard afhankelijk van hun doel en de beschikbare loggingconfiguratie.</p>
-      <p>Omdat bewaartermijnen afhankelijk kunnen zijn van de gebruikte infrastructuur, worden geen langere termijnen beloofd dan daadwerkelijk in de systemen worden gehanteerd.</p>
-    </section>
+    <main>
 
-    <section>
-      <h2>8. Internationale doorgifte</h2>
-      <p>Discord, hostingproviders en andere dienstverleners kunnen persoonsgegevens buiten de Europese Economische Ruimte verwerken. Waar van toepassing gebruiken we de doorgiftemechanismen en waarborgen die onder de AVG vereist zijn, zoals een adequaatheidsbesluit of passende standaardcontractbepalingen.</p>
-    </section>
+      <section>
+        <h2>1. Over dit privacybeleid</h2>
 
-    <section>
-      <h2>9. Jouw privacyrechten</h2>
-      <p>Onder de AVG kun je, afhankelijk van de omstandigheden, onder meer vragen om inzage, correctie of verwijdering van jouw persoonsgegevens. Je kunt ook bezwaar maken tegen bepaalde verwerkingen of vragen om beperking van verwerking. Wanneer verwerking op toestemming is gebaseerd, kun je die toestemming intrekken.</p>
-      <p>Neem voor een verzoek contact op via <a href="mailto:[JOUW-E-MAILADRES]">[JOUW-E-MAILADRES]</a>. We kunnen vragen om redelijke informatie om te controleren welke gegevens bij jouw verzoek horen.</p>
-      <p>De Autoriteit Persoonsgegevens beschrijft deze rechten en de wijze waarop betrokkenen zulke verzoeken kunnen indienen.</p>
-    </section>
+        <p>
+          ProDrop NL respecteert de privacy
+          van gebruikers en behandelt
+          persoonsgegevens zorgvuldig.
+        </p>
 
-    <section>
-      <h2>10. Beveiliging</h2>
-      <p>We nemen passende technische en organisatorische maatregelen om persoonsgegevens te beschermen tegen verlies, ongeoorloofde toegang en ander onrechtmatig gebruik. Geen enkel systeem kan echter absolute veiligheid garanderen.</p>
-    </section>
+        <p>
+          Dit privacybeleid beschrijft
+          welke persoonsgegevens wij
+          verwerken bij het gebruik van
+          onze Discord-bot, voorraadmeldingen,
+          prijsgrenzen en ProDrop Premium.
+        </p>
 
-    <section>
-      <h2>11. Kinderen</h2>
-      <p>ProDrop NL is niet specifiek gericht op kinderen. We verzamelen niet bewust meer persoonsgegevens van kinderen dan noodzakelijk voor het gebruik van de dienst.</p>
-    </section>
+        <p>
+          Ook leggen wij uit hoe wij
+          omgaan met gegevens die nodig
+          zijn voor PayPal-betalingen,
+          Premium-activering, terugbetalingen
+          en betalingsgeschillen.
+        </p>
 
-    <section>
-      <h2>12. Wijzigingen in dit privacybeleid</h2>
-      <p>Dit privacybeleid kan worden aangepast wanneer onze verwerking, de dienst, wetgeving of gebruikte dienstverleners veranderen. De meest actuele versie wordt op deze pagina gepubliceerd.</p>
-    </section>
+        <p>
+          Wij verwerken persoonsgegevens
+          volgens de toepasselijke
+          privacywetgeving, waaronder
+          de Algemene verordening
+          gegevensbescherming (AVG).
+        </p>
+      </section>
 
-    <section>
-      <h2>13. Contact</h2>
-      <p>Voor vragen over privacy of om een AVG-verzoek in te dienen:</p>
-      <p><strong>E-mail:</strong> <a href="mailto:[JOUW-E-MAILADRES]">[JOUW-E-MAILADRES]</a></p>
-    </section>
-  </main>
+      <section>
+        <h2>2. Verwerkingsverantwoordelijke</h2>
 
-  <footer>ProDrop NL · Laatst bijgewerkt: 2 oktober 2026</footer>
+        <p>
+          Voor de persoonsgegevens die
+          ProDrop NL zelf verwerkt,
+          is de beheerder van ProDrop NL
+          de verwerkingsverantwoordelijke.
+        </p>
+
+        <div class="highlight">
+          <p>
+            <strong>Naam dienst:</strong>
+            ProDrop NL
+          </p>
+
+          <p>
+            <strong>Beheerder / handelsnaam:</strong>
+            [JOUW NAAM OF HANDELSNAAM]
+          </p>
+
+          <p>
+            <strong>Contact:</strong>
+            [JOUW-E-MAILADRES]
+          </p>
+
+          <p>
+            <strong>Vestigingsgegevens:</strong>
+            [JOUW ZAKELIJKE CONTACTGEGEVENS]
+          </p>
+
+          <p>
+            <strong>KvK-nummer, indien van toepassing:</strong>
+            [JOUW KVK-NUMMER]
+          </p>
+        </div>
+
+        <p>
+          Voor vragen over persoonsgegevens
+          of dit privacybeleid kun je
+          contact met ons opnemen via
+          bovenstaande contactgegevens.
+        </p>
+      </section>
+
+      <section>
+        <h2>3. Welke persoonsgegevens verwerken wij?</h2>
+
+        <p>
+          ProDrop NL probeert uitsluitend
+          persoonsgegevens te verwerken
+          die nodig zijn om de dienst
+          aan te bieden en veilig te houden.
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Gegevens</th>
+                <th>Doel</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Discord User ID</td>
+                <td>
+                  Gebruikers herkennen en
+                  persoonlijke instellingen
+                  aan het juiste account koppelen.
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  Discord-gebruikersnaam
+                  en weergavenaam
+                </td>
+                <td>
+                  Gebruikers identificeren
+                  bij interacties met de bot
+                  en ondersteuning.
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  Discord-server- en rolgegevens
+                </td>
+                <td>
+                  Gratis en Premium-toegang
+                  beheren en rollen
+                  synchroniseren.
+                </td>
+              </tr>
+
+              <tr>
+                <td>Persoonlijke prijsgrenzen</td>
+                <td>
+                  Prijsmeldingen aanbieden
+                  op basis van jouw voorkeuren.
+                </td>
+              </tr>
+
+              <tr>
+                <td>Premium-status</td>
+                <td>
+                  Vaststellen of je toegang
+                  hebt tot Premium-functies.
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  Premium-activeringsdatum
+                  en vervaldatum
+                </td>
+                <td>
+                  De geldigheidsduur van
+                  Premium-toegang controleren.
+                </td>
+              </tr>
+
+              <tr>
+                <td>PayPal-order-ID</td>
+                <td>
+                  Betaalverzoeken identificeren
+                  en betalingen verifiëren.
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  PayPal-transactie-
+                  of capture-ID
+                </td>
+                <td>
+                  Succesvolle betalingen
+                  herkennen en dubbele
+                  verwerking voorkomen.
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  Betalingsstatus,
+                  bedrag en valuta
+                </td>
+                <td>
+                  Controleren of de juiste
+                  betaling is uitgevoerd.
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  Betalings- en
+                  verificatietijdstippen
+                </td>
+                <td>
+                  Premium-activering,
+                  controle en administratie.
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  Terugbetalings- en
+                  geschilstatus
+                </td>
+                <td>
+                  Betalingsproblemen afhandelen
+                  en toegang aanpassen wanneer
+                  een betaling wordt teruggedraaid.
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  Acceptatie van
+                  aankoopvoorwaarden
+                </td>
+                <td>
+                  Vastleggen welke voorwaarden
+                  bij een aankoop zijn bevestigd.
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  Technische foutmeldingen
+                  en gebruiksgegevens
+                </td>
+                <td>
+                  Storingen oplossen,
+                  misbruik beperken
+                  en betrouwbaarheid verbeteren.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Welke gegevens daadwerkelijk
+          worden verwerkt, hangt af van
+          de functies die je gebruikt.
+        </p>
+
+        <p>
+          Wij hebben voor onze eigen
+          PayPal-integratie geen
+          PayPal-wachtwoord of volledige
+          betaalkaartgegevens nodig.
+        </p>
+      </section>
+
+      <section>
+        <h2>4. Waarvoor gebruiken wij gegevens?</h2>
+
+        <p>
+          ProDrop NL verwerkt gegevens
+          voor de volgende doeleinden:
+        </p>
+
+        <ul>
+          <li>
+            Het aanbieden en onderhouden
+            van de Discord-bot.
+          </li>
+
+          <li>
+            Het versturen van voorraad-
+            en prijswijzigingsmeldingen.
+          </li>
+
+          <li>
+            Het bewaren en toepassen van
+            persoonlijke prijsgrenzen.
+          </li>
+
+          <li>
+            Het beheren van gratis en
+            betaalde Premium-toegang.
+          </li>
+
+          <li>
+            Het controleren en verwerken
+            van PayPal-betalingen.
+          </li>
+
+          <li>
+            Het automatisch toekennen
+            en verwijderen van
+            relevante Discord-rollen.
+          </li>
+
+          <li>
+            Het detecteren van dubbele,
+            terugbetaalde of betwiste
+            transacties.
+          </li>
+
+          <li>
+            Het voorkomen van fraude,
+            misbruik en ongeautoriseerde
+            toegang.
+          </li>
+
+          <li>
+            Het verhelpen van technische
+            problemen en storingen.
+          </li>
+
+          <li>
+            Het voldoen aan toepasselijke
+            wettelijke verplichtingen.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>5. Rechtsgrondslagen</h2>
+
+        <p>
+          Wij verwerken persoonsgegevens
+          uitsluitend wanneer daarvoor
+          een geldige rechtsgrondslag
+          bestaat.
+        </p>
+
+        <h3>Uitvoering van een overeenkomst</h3>
+
+        <p>
+          Voor het leveren van
+          voorraadmeldingen, persoonlijke
+          instellingen en Premium-toegang
+          verwerken wij gegevens die
+          noodzakelijk zijn voor het
+          gebruik van deze functies.
+        </p>
+
+        <h3>Gerechtvaardigd belang</h3>
+
+        <p>
+          Wij kunnen gegevens verwerken
+          om onze systemen te beveiligen,
+          fraude te voorkomen, technische
+          storingen op te lossen en
+          de betrouwbaarheid van de
+          dienst te bewaken.
+        </p>
+
+        <p>
+          Daarbij wegen wij onze belangen
+          af tegen de privacyrechten
+          van gebruikers.
+        </p>
+
+        <h3>Wettelijke verplichting</h3>
+
+        <p>
+          Wanneer de wet dit vereist,
+          verwerken of bewaren wij
+          bepaalde gegevens voor
+          bijvoorbeeld fiscale
+          administratie of het
+          voldoen aan wettelijke verzoeken.
+        </p>
+
+        <h3>Toestemming</h3>
+
+        <p>
+          Voor verwerkingen waarvoor
+          toestemming wettelijk vereist
+          is, vragen wij die toestemming
+          vooraf. Je kunt die toestemming
+          weer intrekken.
+        </p>
+      </section>
+
+      <section>
+        <h2>6. PayPal en Premium-betalingen</h2>
+
+        <div class="highlight">
+          <strong>ProDrop Premium</strong>
+
+          <p>
+            Premium via PayPal kost
+            €2,99 voor 30 dagen toegang.
+          </p>
+
+          <p>
+            Het betreft een eenmalige
+            betaling zonder automatische
+            verlenging.
+          </p>
+        </div>
+
+        <p>
+          Wanneer je Premium aanschaft
+          via PayPal, wordt je betaling
+          verwerkt door PayPal.
+        </p>
+
+        <p>
+          ProDrop NL controleert vervolgens
+          via de PayPal-integratie of
+          een betaling daadwerkelijk
+          is voltooid.
+        </p>
+
+        <p>
+          Hierbij kunnen de volgende
+          gegevens worden verwerkt:
+        </p>
+
+        <ul>
+          <li>Je Discord User ID.</li>
+          <li>Je PayPal-order-ID.</li>
+          <li>Je PayPal-capture-ID.</li>
+          <li>De betalingsstatus.</li>
+          <li>Het betaalde bedrag en de valuta.</li>
+          <li>Het tijdstip van betaling.</li>
+          <li>Het tijdstip van verificatie.</li>
+          <li>De start- en einddatum van Premium.</li>
+          <li>
+            De status van eventuele
+            terugbetalingen of geschillen.
+          </li>
+          <li>
+            Het tijdstip en de versie
+            van geaccepteerde aankoopvoorwaarden.
+          </li>
+        </ul>
+
+        <p>
+          Deze gegevens zijn nodig om
+          betalingen correct te verwerken,
+          Premium-toegang toe te kennen,
+          dubbele verwerking te voorkomen
+          en betalingsgeschillen
+          af te handelen.
+        </p>
+
+        <p>
+          Wij ontvangen niet je
+          PayPal-wachtwoord of volledige
+          betaalkaartgegevens.
+        </p>
+
+        <p>
+          PayPal verwerkt daarnaast zelf
+          persoonsgegevens volgens
+          het eigen privacybeleid.
+        </p>
+
+        <p>
+          Meer informatie:
+          <a href="https://www.paypal.com/nl/legalhub/paypal/privacy-full"
+             target="_blank"
+             rel="noopener noreferrer">
+            Privacyverklaring van PayPal
+          </a>.
+        </p>
+      </section>
+
+      <section>
+        <h2>7. Automatische Premium-activering</h2>
+
+        <p>
+          Na een succesvolle, geverifieerde
+          PayPal-betaling kan ProDrop NL
+          automatisch Premium-toegang
+          activeren.
+        </p>
+
+        <p>
+          De betaling wordt gekoppeld aan
+          het Discord-account waarmee
+          de aankoop is gestart.
+        </p>
+
+        <p>
+          Onze systemen controleren
+          periodiek of gebruikers
+          recht hebben op Premium.
+        </p>
+
+        <p>
+          Daarbij kan de bot automatisch:
+        </p>
+
+        <ul>
+          <li>
+            De Premium-rol toekennen.
+          </li>
+          <li>
+            De gratis rol aanpassen
+            wanneer dat nodig is.
+          </li>
+          <li>
+            De geldigheidsduur
+            van Premium controleren.
+          </li>
+          <li>
+            Premium-toegang beëindigen
+            na het verlopen van de
+            toegangsperiode.
+          </li>
+          <li>
+            Toegang aanpassen bij
+            terugbetalingen of
+            betalingsgeschillen.
+          </li>
+        </ul>
+
+        <p>
+          Deze controles zijn gebaseerd
+          op de betaal- en toegangsstatus
+          van het betreffende account.
+        </p>
+
+        <p>
+          Er wordt hierbij geen
+          kredietwaardigheidsscore
+          of vergelijkbaar persoonlijk
+          risicoprofiel opgesteld.
+        </p>
+
+        <p>
+          Bij een foutieve toegangsstatus
+          kun je contact opnemen om
+          een handmatige controle
+          aan te vragen.
+        </p>
+      </section>
+
+      <section>
+        <h2>8. Discord-gegevens en prijsgrenzen</h2>
+
+        <p>
+          Voor het functioneren van
+          ProDrop NL kunnen gegevens
+          worden ontvangen via de
+          Discord API.
+        </p>
+
+        <p>
+          Afhankelijk van de interactie
+          kunnen dit bijvoorbeeld
+          Discord-identificatiegegevens,
+          serverinformatie, rolstatussen
+          en commandogegevens zijn.
+        </p>
+
+        <p>
+          Wanneer je een persoonlijke
+          prijsgrens instelt, wordt
+          deze gekoppeld aan je
+          Discord-account.
+        </p>
+
+        <p>
+          Deze informatie wordt gebruikt
+          om passende prijsalerts
+          te kunnen aanbieden.
+        </p>
+
+        <p>
+          Discord verwerkt daarnaast
+          zelf persoonsgegevens volgens
+          het eigen privacybeleid.
+        </p>
+
+        <p>
+          Meer informatie:
+          <a href="https://discord.com/privacy"
+             target="_blank"
+             rel="noopener noreferrer">
+            Privacybeleid van Discord
+          </a>.
+        </p>
+      </section>
+
+      <section>
+        <h2>9. Met wie delen wij gegevens?</h2>
+
+        <p>
+          Wij verkopen geen
+          persoonsgegevens.
+        </p>
+
+        <p>
+          Gegevens worden alleen gedeeld
+          wanneer dat nodig is voor
+          onze dienstverlening,
+          wanneer daarvoor een geldige
+          rechtsgrondslag bestaat
+          of wanneer dit wettelijk
+          vereist is.
+        </p>
+
+        <h3>Discord</h3>
+
+        <p>
+          Voor de werking van de bot,
+          het uitvoeren van commands
+          en het beheren van rollen.
+        </p>
+
+        <h3>PayPal</h3>
+
+        <p>
+          Voor het verwerken,
+          controleren en afhandelen
+          van betalingen en geschillen.
+        </p>
+
+        <h3>Hostingproviders</h3>
+
+        <p>
+          Voor het beschikbaar stellen
+          van de bot en het veilig
+          opslaan van noodzakelijke
+          gegevens en configuraties.
+        </p>
+
+        <h3>GitHub Pages</h3>
+
+        <p>
+          Deze juridische website
+          wordt via GitHub Pages
+          beschikbaar gesteld.
+          Bij het bezoeken van de
+          website kan GitHub technische
+          verbindingsgegevens verwerken
+          volgens het eigen privacybeleid.
+        </p>
+
+        <h3>Bevoegde instanties</h3>
+
+        <p>
+          Wanneer een wettelijke
+          verplichting dit vereist,
+          kunnen noodzakelijke
+          gegevens worden verstrekt
+          aan bevoegde instanties.
+        </p>
+      </section>
+
+      <section>
+        <h2>10. Bewaartermijnen</h2>
+
+        <p>
+          Wij bewaren persoonsgegevens
+          niet langer dan nodig is
+          voor het doel waarvoor
+          zij worden verwerkt,
+          tenzij een wettelijke
+          verplichting een langere
+          bewaartermijn vereist.
+        </p>
+
+        <h3>Discord-instellingen</h3>
+
+        <p>
+          Persoonlijke instellingen
+          worden bewaard zolang
+          zij nodig zijn voor de
+          betreffende botfunctionaliteit
+          of totdat zij volgens het
+          toepasselijke verwijderbeleid
+          worden verwijderd.
+        </p>
+
+        <h3>Premium-toegangsgegevens</h3>
+
+        <p>
+          Actieve toegangsgegevens zijn
+          nodig zolang een Premium-periode
+          loopt. Een verlopen toegang
+          betekent niet automatisch dat
+          alle betalingsregistraties
+          worden verwijderd.
+        </p>
+
+        <h3>PayPal-transactiegegevens</h3>
+
+        <p>
+          Transactiegegevens kunnen
+          langer nodig zijn voor
+          betalingsadministratie,
+          geschillenafhandeling en
+          wettelijke verplichtingen.
+        </p>
+
+        <p>
+          Voor gegevens die onderdeel
+          zijn van een wettelijke
+          fiscale basisadministratie
+          geldt in Nederland doorgaans
+          een bewaartermijn van zeven jaar.
+        </p>
+
+        <h3>Technische logs</h3>
+
+        <p>
+          Technische logs worden
+          gebruikt om problemen te
+          onderzoeken en de dienst
+          te beveiligen.
+        </p>
+
+        <div class="highlight">
+          <strong>Nog te specificeren bewaartermijnen</strong>
+
+          <p>
+            Discord-instellingen:
+            [VUL FEITELIJKE TERMIJN IN]
+          </p>
+
+          <p>
+            Niet-fiscaal verplichte
+            betaal- en toegangsgegevens:
+            [VUL FEITELIJKE TERMIJN IN]
+          </p>
+
+          <p>
+            Technische logs:
+            [VUL FEITELIJKE TERMIJN IN]
+          </p>
+        </div>
+
+        <p>
+          Gegevens waarvoor geen
+          verdere verwerkingsgrond
+          bestaat, worden verwijderd
+          of geanonimiseerd.
+        </p>
+      </section>
+
+      <section>
+        <h2>11. Beveiliging van persoonsgegevens</h2>
+
+        <p>
+          ProDrop NL neemt passende
+          technische en organisatorische
+          maatregelen om persoonsgegevens
+          te beschermen.
+        </p>
+
+        <p>
+          Deze maatregelen zijn gericht
+          op het beperken van:
+        </p>
+
+        <ul>
+          <li>Ongeautoriseerde toegang.</li>
+          <li>Verlies van gegevens.</li>
+          <li>Onrechtmatige wijziging.</li>
+          <li>Onbedoelde openbaarmaking.</li>
+          <li>Frauduleuze betaalverwerking.</li>
+        </ul>
+
+        <p>
+          Voor betalingsverificatie
+          worden afzonderlijke
+          beveiligde configuraties
+          en gegevensopslag gebruikt.
+        </p>
+
+        <p>
+          Toegang tot beheersystemen
+          wordt beperkt tot personen
+          die deze toegang nodig hebben.
+        </p>
+
+        <p>
+          Geen enkel digitaal systeem
+          kan volledige bescherming
+          tegen alle risico's garanderen.
+        </p>
+      </section>
+
+      <section>
+        <h2>12. Internationale gegevensverwerking</h2>
+
+        <p>
+          Sommige externe dienstverleners,
+          waaronder Discord, PayPal
+          en GitHub, kunnen gegevens
+          buiten de Europese
+          Economische Ruimte verwerken.
+        </p>
+
+        <p>
+          Voor zover ProDrop NL
+          verantwoordelijk is voor
+          een dergelijke doorgifte,
+          moeten daarvoor passende
+          waarborgen aanwezig zijn,
+          zoals een adequaatheidsbesluit
+          of geldige standaardcontractbepalingen.
+        </p>
+
+        <p>
+          De specifieke verwerking
+          door externe dienstverleners
+          wordt mede beschreven in
+          hun eigen privacyverklaringen.
+        </p>
+      </section>
+
+      <section>
+        <h2>13. Jouw privacyrechten</h2>
+
+        <p>
+          Op grond van de AVG kun je,
+          afhankelijk van de omstandigheden,
+          verschillende rechten uitoefenen.
+        </p>
+
+        <ul>
+          <li>
+            <strong>Recht op inzage:</strong>
+            opvragen welke persoonsgegevens
+            wij van je verwerken.
+          </li>
+
+          <li>
+            <strong>Recht op rectificatie:</strong>
+            onjuiste gegevens laten corrigeren.
+          </li>
+
+          <li>
+            <strong>Recht op verwijdering:</strong>
+            verzoeken om gegevens te verwijderen
+            wanneer daarvoor een wettelijke
+            grond bestaat.
+          </li>
+
+          <li>
+            <strong>Recht op beperking:</strong>
+            onder bepaalde omstandigheden
+            de verwerking laten beperken.
+          </li>
+
+          <li>
+            <strong>Recht van bezwaar:</strong>
+            bezwaar maken tegen verwerkingen
+            die op gerechtvaardigd belang
+            zijn gebaseerd.
+          </li>
+
+          <li>
+            <strong>Recht op dataportabiliteit:</strong>
+            in toepasselijke gevallen
+            gegevens in een overdraagbaar
+            formaat ontvangen.
+          </li>
+
+          <li>
+            <strong>Recht op intrekking:</strong>
+            gegeven toestemming intrekken,
+            wanneer verwerking op toestemming
+            is gebaseerd.
+          </li>
+        </ul>
+
+        <p>
+          Je kunt een verzoek indienen
+          via het contactadres
+          in dit privacybeleid.
+        </p>
+
+        <p>
+          Om misbruik te voorkomen
+          kunnen wij redelijkerwijs
+          controleren of het verzoek
+          afkomstig is van de
+          betreffende gebruiker.
+        </p>
+
+        <p>
+          Wij reageren in beginsel
+          binnen één maand op een
+          privacyverzoek.
+          Bij complexe verzoeken
+          kan deze termijn volgens
+          de AVG worden verlengd.
+        </p>
+
+        <p>
+          Niet alle gegevens kunnen
+          op verzoek direct worden
+          verwijderd, bijvoorbeeld
+          wanneer een wettelijke
+          bewaarplicht van toepassing is.
+        </p>
+      </section>
+
+      <section>
+        <h2>14. Klachten</h2>
+
+        <p>
+          Heb je vragen of klachten
+          over hoe ProDrop NL met
+          persoonsgegevens omgaat?
+        </p>
+
+        <p>
+          Neem dan contact met ons op
+          zodat wij het probleem
+          kunnen onderzoeken.
+        </p>
+
+        <p>
+          Je hebt daarnaast het recht
+          een klacht in te dienen
+          bij de Nederlandse
+          Autoriteit Persoonsgegevens.
+        </p>
+
+        <p>
+          Meer informatie:
+          <a href="https://autoriteitpersoonsgegevens.nl"
+             target="_blank"
+             rel="noopener noreferrer">
+            Autoriteit Persoonsgegevens
+          </a>.
+        </p>
+      </section>
+
+      <section>
+        <h2>15. Cookies en websitegebruik</h2>
+
+        <p>
+          De juridische pagina's
+          van ProDrop NL zijn
+          eenvoudige webpagina's.
+        </p>
+
+        <p>
+          De HTML van deze pagina
+          bevat geen eigen
+          advertentietrackers of
+          analytische scripts.
+        </p>
+
+        <p>
+          De hostingprovider kan
+          technische verbindingsgegevens
+          verwerken voor het leveren
+          en beveiligen van de website.
+        </p>
+
+        <p>
+          Wanneer in de toekomst
+          aanvullende trackingtechnologie
+          wordt toegevoegd,
+          zullen wij het privacy-
+          en cookiebeleid waar
+          nodig aanpassen.
+        </p>
+      </section>
+
+      <section>
+        <h2>16. Externe webwinkels</h2>
+
+        <p>
+          ProDrop NL monitort
+          product-, voorraad-
+          en prijsinformatie van
+          geselecteerde webwinkels.
+        </p>
+
+        <p>
+          Deze monitoring is gericht
+          op productbeschikbaarheid
+          en niet op het verzamelen
+          van persoonsgegevens
+          van winkelbezoekers.
+        </p>
+
+        <p>
+          Wanneer je vanuit een
+          ProDrop-melding een externe
+          webshop bezoekt, is het
+          privacybeleid van die
+          webwinkel van toepassing
+          op de verwerking door
+          die partij.
+        </p>
+      </section>
+
+      <section>
+        <h2>17. Kinderen en minderjarigen</h2>
+
+        <p>
+          ProDrop NL is niet
+          specifiek gericht op kinderen.
+        </p>
+
+        <p>
+          Voor het gebruik van Discord
+          en PayPal gelden de
+          leeftijdsvoorwaarden van
+          de betreffende platforms.
+        </p>
+
+        <p>
+          Wanneer wij ontdekken
+          dat persoonsgegevens
+          onrechtmatig zijn verzameld,
+          zullen wij passende
+          maatregelen nemen.
+        </p>
+      </section>
+
+      <section>
+        <h2>18. Wijzigingen in dit privacybeleid</h2>
+
+        <p>
+          Wij kunnen dit privacybeleid
+          aanpassen wanneer onze
+          dienstverlening, gegevensverwerking,
+          betaalmethoden of toepasselijke
+          wetgeving veranderen.
+        </p>
+
+        <p>
+          De actuele versie wordt
+          gepubliceerd op deze pagina.
+        </p>
+
+        <p>
+          Bij belangrijke wijzigingen
+          informeren wij gebruikers
+          waar dit wettelijk vereist is.
+        </p>
+      </section>
+
+      <section>
+        <h2>19. Contact</h2>
+
+        <p>
+          Voor vragen over privacy,
+          gegevensverwerking, PayPal
+          of het indienen van een
+          AVG-verzoek kun je contact
+          opnemen met ProDrop NL.
+        </p>
+
+        <div class="highlight">
+          <p>
+            <strong>Organisatie:</strong>
+            ProDrop NL
+          </p>
+
+          <p>
+            <strong>E-mail:</strong>
+            [JOUW-E-MAILADRES]
+          </p>
+
+          <p>
+            <strong>Onderwerp:</strong>
+            Privacyverzoek ProDrop NL
+          </p>
+        </div>
+
+        <p class="notice">
+          Vermeld bij een verzoek
+          bij voorkeur je Discord-gebruikersnaam
+          of Discord User ID.
+          Verstuur nooit wachtwoorden,
+          PayPal-inloggegevens of
+          volledige betaalkaartgegevens.
+        </p>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>
+        © 2026 ProDrop NL.
+        Alle rechten voorbehouden.
+      </p>
+
+      <p>
+        Laatst bijgewerkt: 5 november 2026
+      </p>
+
+      <p>
+        <a href="index.html">Overzicht</a>
+        ·
+        <a href="terms.html">Servicevoorwaarden</a>
+        ·
+        <a href="privacy.html">Privacybeleid</a>
+      </p>
+    </footer>
+
+  </div>
 </body>
 </html>
