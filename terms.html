@@ -1,110 +1,864 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ProDrop NL — Servicevoorwaarden</title>
-  <meta name="description" content="Servicevoorwaarden van ProDrop NL.">
+
+  <meta name="description"
+        content="Servicevoorwaarden van ProDrop NL. Lees alles over voorraadmeldingen, ProDrop Premium, PayPal-betalingen en je rechten.">
+
+  <title>Servicevoorwaarden | ProDrop NL</title>
+
   <style>
-    :root { --bg:#0b1020; --card:#121a2d; --text:#eef2ff; --muted:#aab3c5; --accent:#7c5cff; --border:#27324d; }
-    * { box-sizing:border-box; }
-    body { margin:0; font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:linear-gradient(180deg,#0b1020 0%,#0f1628 100%); color:var(--text); line-height:1.7; }
-    header { padding:48px 20px 28px; text-align:center; }
-    header h1 { margin:0 0 8px; font-size:clamp(2rem,5vw,3rem); }
-    header p { margin:0; color:var(--muted); }
-    nav { text-align:center; padding:0 20px 24px; }
-    nav a { color:#c9c1ff; text-decoration:none; margin:0 10px; }
-    main { max-width:900px; margin:0 auto; padding:0 20px 60px; }
-    section { background:rgba(18,26,45,.9); border:1px solid var(--border); border-radius:16px; padding:24px; margin:16px 0; box-shadow:0 10px 30px rgba(0,0,0,.12); }
-    h2 { margin-top:0; font-size:1.35rem; }
-    h3 { font-size:1rem; }
-    a { color:#a99aff; }
-    .note { border-left:4px solid var(--accent); padding:12px 16px; background:#171f35; border-radius:8px; color:#dce2f3; }
-    footer { text-align:center; color:var(--muted); padding:30px 20px 50px; font-size:.9rem; }
-    code { background:#0a0f1d; padding:2px 6px; border-radius:6px; }
+    :root {
+      color-scheme: dark;
+      --bg: #080e1b;
+      --card: #111b2e;
+      --text: #edf3ff;
+      --muted: #a3b2c9;
+      --accent: #38bdf8;
+      --border: #26364e;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system,
+        BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.75;
+    }
+
+    .container {
+      width: min(920px, calc(100% - 32px));
+      margin: 40px auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .brand {
+      color: var(--accent);
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 10px 0;
+      font-size: clamp(28px, 5vw, 40px);
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    nav a {
+      padding: 10px 18px;
+      color: var(--text);
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    nav a:hover,
+    nav a.active {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    main {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: clamp(20px, 5vw, 42px);
+    }
+
+    section {
+      margin-bottom: 34px;
+    }
+
+    section:last-child {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      color: var(--accent);
+      font-size: 19px;
+      margin: 0 0 14px;
+      line-height: 1.4;
+    }
+
+    h3 {
+      font-size: 16px;
+      margin: 18px 0 8px;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    ul {
+      padding-left: 22px;
+      margin: 10px 0 16px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: var(--accent);
+      overflow-wrap: anywhere;
+    }
+
+    .highlight {
+      background: rgba(56, 189, 248, 0.07);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 12px;
+      padding: 18px 22px;
+      margin: 18px 0;
+    }
+
+    .highlight strong {
+      color: var(--accent);
+    }
+
+    .notice {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    footer {
+      padding: 26px 12px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    footer a {
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin: 20px auto;
+      }
+
+      nav a {
+        flex: 1;
+        text-align: center;
+      }
+
+      .highlight {
+        padding: 16px;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <header>
-    <h1>ProDrop NL</h1>
-    <p>Servicevoorwaarden</p>
-  </header>
-  <nav>
-    <a href="terms.html">Servicevoorwaarden</a>
-    <a href="privacy.html">Privacybeleid</a>
-  </nav>
+  <div class="container">
 
-  <main>
-    <section>
-      <h2>1. Over deze voorwaarden</h2>
-      <p>Deze servicevoorwaarden (“Voorwaarden”) gelden voor het gebruik van ProDrop NL, een Discord-app/bot die voorraad- en prijsinformatie over de Sony PlayStation 5 Pro bij geselecteerde retailers monitort en meldingen kan versturen.</p>
-      <p>Door ProDrop NL te gebruiken, ga je akkoord met deze Voorwaarden. Gebruik je de Premium-functies, dan gelden daarnaast de toepasselijke aankoop- en abonnementsvoorwaarden van het betaalplatform dat de aankoop verwerkt.</p>
-    </section>
+    <header>
+      <div class="brand">ProDrop NL</div>
 
-    <section>
-      <h2>2. Dienst</h2>
-      <p>ProDrop NL probeert voorraad- en prijsinformatie van externe webwinkels zo actueel mogelijk te verzamelen. Meldingen zijn gebaseerd op geautomatiseerde controles van openbare of voor de bot toegankelijke informatie.</p>
-      <div class="note"><strong>Belangrijk:</strong> ProDrop NL kan niet garanderen dat voorraad, prijs, levertijd, bestelbaarheid of andere informatie altijd volledig, correct of realtime is. Controleer de informatie altijd op de website van de betreffende winkel voordat je een aankoop doet.</div>
-    </section>
+      <h1>Servicevoorwaarden</h1>
 
-    <section>
-      <h2>3. Gratis functies</h2>
-      <p>ProDrop NL kan gratis voorraadmeldingen aanbieden via de daarvoor aangewezen Discord-kanalen. De inhoud, frequentie, beschikbaarheid en deelnemende winkels van gratis functies kunnen worden gewijzigd.</p>
-    </section>
+      <p class="subtitle">
+        Voorwaarden voor het gebruik van ProDrop NL
+        en ProDrop Premium.
+      </p>
 
-    <section>
-      <h2>4. Premium</h2>
-      <p>ProDrop Premium kan functies bevatten zoals snellere voorraadmonitoring, Premium-voorraadmeldingen, prijswijzigingsmeldingen en persoonlijke prijsgrenzen voor de PlayStation 5 Pro.</p>
-      <p>Premium-functies zijn alleen beschikbaar zolang de gebruiker daar volgens het toepasselijke abonnement, entitlement of andere aankoopstatus recht op heeft. Een Premium-rol op Discord kan als technische toegangscontrole worden gebruikt.</p>
-      <p>ProDrop NL kan Premium-functies aanpassen, toevoegen of verwijderen. Wij proberen belangrijke wijzigingen duidelijk te communiceren.</p>
-    </section>
+      <nav aria-label="Juridische navigatie">
+        <a href="index.html">Overzicht</a>
+        <a href="terms.html" class="active"
+           aria-current="page">
+          Servicevoorwaarden
+        </a>
+        <a href="privacy.html">Privacybeleid</a>
+      </nav>
+    </header>
 
-    <section>
-      <h2>5. Betalingen, abonnementen en opzegging</h2>
-      <p>Wanneer Premium via Discord of een andere betaalprovider wordt aangeschaft, wordt de betaling verwerkt volgens de voorwaarden van dat betaalplatform. ProDrop NL ontvangt niet automatisch alle betaalgegevens die jij bij de betaalprovider invoert.</p>
-      <p>Voor abonnementen gelden de prijs, factureringsperiode, verlenging, annulering en terugbetalingsregels die tijdens de aankoop worden getoond en/of door het betaalplatform worden toegepast. Je kunt een abonnement beëindigen via het kanaal dat tijdens de aankoop daarvoor wordt aangeboden.</p>
-      <p>Wanneer een Premium-entitlement eindigt, kan de Premium-toegang en de bijbehorende Discord-rol worden verwijderd.</p>
-    </section>
+    <main>
 
-    <section>
-      <h2>6. Gebruik van de dienst</h2>
-      <p>Je mag ProDrop NL niet gebruiken voor misbruik van Discord, het omzeilen van toegangscontroles, verstoring van de dienst, reverse engineering van beveiligingsmaatregelen, geautomatiseerde belasting van systemen van ProDrop NL of andere activiteiten die in strijd zijn met de wet, Discord-regels of deze Voorwaarden.</p>
-      <p>Je bent verantwoordelijk voor het gebruik van je eigen Discord-account en voor het beschermen van je accountgegevens.</p>
-    </section>
+      <section>
+        <h2>1. Over deze voorwaarden</h2>
 
-    <section>
-      <h2>7. Externe webwinkels</h2>
-      <p>ProDrop NL is geen eigenaar van en vertegenwoordigt niet de retailers waarnaar meldingen kunnen verwijzen. Aankopen, levering, garantie, retouren, prijzen en beschikbaarheid worden door de betreffende winkel bepaald.</p>
-      <p>Een link of melding van ProDrop NL vormt geen aanbeveling of garantie met betrekking tot een externe winkel of product.</p>
-    </section>
+        <p>
+          Deze servicevoorwaarden zijn van toepassing
+          op het gebruik van ProDrop NL, een Discord-bot
+          die voorraad- en prijsinformatie van de
+          Sony PlayStation 5 Pro monitort bij
+          geselecteerde webwinkels.
+        </p>
 
-    <section>
-      <h2>8. Beschikbaarheid en storingen</h2>
-      <p>We streven naar een betrouwbare dienst, maar kunnen niet garanderen dat ProDrop NL altijd beschikbaar of foutloos is. Storingen kunnen bijvoorbeeld ontstaan door Discord, internetverbindingen, hosting, wijzigingen op retailerwebsites, rate limits, anti-botsystemen of andere externe omstandigheden.</p>
-    </section>
+        <p>
+          Door gebruik te maken van ProDrop NL ga je
+          akkoord met deze voorwaarden.
+        </p>
 
-    <section>
-      <h2>9. Intellectueel eigendom</h2>
-      <p>De naam ProDrop NL, eigen software, teksten en vormgeving van ProDrop NL blijven, voor zover toepasselijk, eigendom van de rechthebbende. Merknamen en productnamen van derden, waaronder Sony en de genoemde retailers, blijven eigendom van hun respectieve rechthebbenden.</p>
-    </section>
+        <p>
+          Voor betaalde Premium-functionaliteiten
+          gelden daarnaast de voorwaarden die
+          tijdens de aankoop worden getoond.
+        </p>
+      </section>
 
-    <section>
-      <h2>10. Wijzigingen</h2>
-      <p>Deze Voorwaarden kunnen worden aangepast wanneer de dienst, wetgeving of betaal-/platformvoorwaarden wijzigen. De actuele versie wordt op deze pagina gepubliceerd.</p>
-    </section>
+      <section>
+        <h2>2. Beschrijving van de dienst</h2>
 
-    <section>
-      <h2>11. Contact</h2>
-      <p>Voor vragen over ProDrop NL of deze Voorwaarden kun je contact opnemen via:</p>
-      <p><strong>E-mail:</strong> <a href="mailto:[JOUW-E-MAILADRES]">[JOUW-E-MAILADRES]</a></p>
-    </section>
+        <p>
+          ProDrop NL verzamelt automatisch voorraad-
+          en prijsinformatie van geselecteerde
+          externe webwinkels.
+        </p>
 
-    <section>
-      <h2>12. Toepasselijk recht</h2>
-      <p>Voor zover wettelijk toegestaan worden deze Voorwaarden beheerst door het recht van Nederland. Dwingendrechtelijke consumentenrechten blijven van toepassing.</p>
-    </section>
-  </main>
+        <p>
+          De dienst kan onder andere de volgende
+          functionaliteiten aanbieden:
+        </p>
 
-  <footer>ProDrop NL · Laatst bijgewerkt: 2 oktober 2026</footer>
+        <ul>
+          <li>Automatische voorraadmeldingen.</li>
+          <li>Prijswijzigingsmeldingen.</li>
+          <li>Monitoring van verschillende webwinkels.</li>
+          <li>Persoonlijke prijsgrenzen.</li>
+          <li>Extra Premium-functionaliteiten.</li>
+        </ul>
+
+        <p>
+          ProDrop NL streeft ernaar informatie
+          zo actueel en betrouwbaar mogelijk
+          beschikbaar te stellen.
+        </p>
+
+        <p>
+          Wij kunnen echter niet garanderen dat
+          prijzen, voorraadstatussen en andere
+          informatie altijd volledig, correct
+          of realtime zijn.
+        </p>
+
+        <p>
+          Controleer informatie altijd bij de
+          betreffende webwinkel voordat je een
+          aankoop doet.
+        </p>
+      </section>
+
+      <section>
+        <h2>3. Gratis functionaliteiten</h2>
+
+        <p>
+          ProDrop NL biedt gratis functionaliteiten
+          aan via de daarvoor bestemde
+          Discord-kanalen.
+        </p>
+
+        <p>
+          Gratis gebruikers kunnen afhankelijk
+          van de beschikbare functionaliteiten
+          onder andere voorraadmeldingen ontvangen.
+        </p>
+
+        <p>
+          De frequentie, beschikbaarheid en
+          inhoud van gratis functionaliteiten
+          kunnen wijzigen.
+        </p>
+      </section>
+
+      <section>
+        <h2>4. ProDrop Premium</h2>
+
+        <p>
+          ProDrop Premium is een betaalde uitbreiding
+          van de gratis ProDrop NL-dienst.
+        </p>
+
+        <p>
+          Premium kan onder andere de volgende
+          voordelen bieden:
+        </p>
+
+        <ul>
+          <li>Snellere voorraadmonitoring.</li>
+          <li>Premium-voorraadmeldingen.</li>
+          <li>Prijswijzigingsmeldingen.</li>
+          <li>Persoonlijke prijsgrenzen.</li>
+          <li>
+            Toegang tot aanvullende
+            Premium-functionaliteiten.
+          </li>
+        </ul>
+
+        <p>
+          De daadwerkelijk inbegrepen functies
+          worden bij de aanschaf of binnen de
+          Discord-server vermeld.
+        </p>
+
+        <p>
+          Premium biedt geen garantie dat een
+          product daadwerkelijk beschikbaar
+          is of succesvol besteld kan worden.
+        </p>
+      </section>
+
+      <section>
+        <h2>5. Premium-prijs en looptijd</h2>
+
+        <div class="highlight">
+          <strong>ProDrop Premium via PayPal</strong>
+
+          <p>
+            Prijs: <strong>€2,99</strong> per
+            periode van <strong>30 dagen</strong>.
+          </p>
+
+          <p>
+            Dit is een eenmalige betaling.
+            Er vindt geen automatische verlenging
+            of automatische afschrijving plaats.
+          </p>
+
+          <p>
+            Na afloop van de 30 dagen eindigt
+            de via PayPal gekochte Premium-toegang
+            automatisch, tenzij je zelf
+            opnieuw een betaling uitvoert.
+          </p>
+        </div>
+
+        <p>
+          De Premium-periode begint zodra de
+          Premium-toegang succesvol is geactiveerd.
+        </p>
+
+        <p>
+          Wanneer je Premium opnieuw aanschaft,
+          wordt de nieuwe toegangsperiode volgens
+          de bij de aankoop vermelde regels verwerkt.
+        </p>
+
+        <p>
+          Eventuele andere Premium-producten
+          of abonnementen via Discord of
+          andere betaalplatformen kunnen
+          eigen prijzen, looptijden en
+          verlengingsvoorwaarden hebben.
+        </p>
+      </section>
+
+      <section>
+        <h2>6. PayPal-betalingen</h2>
+
+        <p>
+          PayPal-betalingen worden verwerkt
+          via de betaalomgeving van PayPal.
+        </p>
+
+        <p>
+          ProDrop NL ontvangt niet je volledige
+          betaalkaartgegevens of je
+          PayPal-inloggegevens.
+        </p>
+
+        <p>
+          Voor de verwerking en verificatie
+          van betalingen kunnen relevante
+          transactiegegevens worden gebruikt,
+          zoals:
+        </p>
+
+        <ul>
+          <li>PayPal-transactie-ID.</li>
+          <li>Betalingsstatus.</li>
+          <li>Betaald bedrag en valuta.</li>
+          <li>Betalingsdatum.</li>
+          <li>
+            Het Discord-account waaraan
+            Premium wordt gekoppeld.
+          </li>
+          <li>
+            De activeringsdatum en
+            vervaldatum van Premium.
+          </li>
+        </ul>
+
+        <p>
+          Deze gegevens worden gebruikt om
+          betalingen te controleren, Premium
+          te activeren en misbruik of dubbele
+          verwerking te voorkomen.
+        </p>
+
+        <p>
+          Op betalingen via PayPal zijn ook
+          de toepasselijke voorwaarden van
+          PayPal van toepassing.
+        </p>
+      </section>
+
+      <section>
+        <h2>7. Activering van Premium</h2>
+
+        <p>
+          Na een succesvolle en verifieerbare
+          betaling wordt Premium gekoppeld
+          aan het daarvoor opgegeven of
+          geverifieerde Discord-account.
+        </p>
+
+        <p>
+          ProDrop NL kan hiervoor automatisch
+          de bijbehorende Premium-rol
+          toekennen.
+        </p>
+
+        <p>
+          De activering is afhankelijk van
+          een geldige betaling en een correcte
+          koppeling met het Discord-account.
+        </p>
+
+        <p>
+          Bij technische problemen kan
+          activering vertraging oplopen.
+          Neem in dat geval contact op
+          met ProDrop NL.
+        </p>
+
+        <p>
+          Bij afloop van de toegangsperiode
+          kunnen de Premium-functies en
+          bijbehorende Discord-rol
+          automatisch worden verwijderd.
+        </p>
+      </section>
+
+      <section>
+        <h2>8. Verlenging en beëindiging</h2>
+
+        <p>
+          Een via PayPal aangeschafte
+          Premium-periode wordt niet
+          automatisch verlengd.
+        </p>
+
+        <p>
+          Je hoeft daarom geen doorlopende
+          PayPal-betaling op te zeggen
+          voor deze eenmalige aankoop.
+        </p>
+
+        <p>
+          Wil je na afloop Premium blijven
+          gebruiken, dan kun je zelf
+          opnieuw een Premium-periode
+          aanschaffen.
+        </p>
+
+        <p>
+          Het verlaten van de Discord-server
+          of het verwijderen van je Discord-account
+          leidt niet automatisch tot
+          terugbetaling van een reeds
+          aangeschafte periode.
+        </p>
+
+        <p>
+          Eventuele wettelijke rechten
+          blijven onverminderd van toepassing.
+        </p>
+      </section>
+
+      <section>
+        <h2>9. Herroepingsrecht en terugbetalingen</h2>
+
+        <p>
+          Voor consumenten kunnen bij online
+          aankopen wettelijke rechten gelden,
+          waaronder het herroepingsrecht.
+        </p>
+
+        <p>
+          Bij een overeenkomst op afstand
+          geldt in beginsel een wettelijke
+          bedenktijd van 14 dagen,
+          voor zover geen wettelijke
+          uitzondering van toepassing is.
+        </p>
+
+        <p>
+          Wanneer je verzoekt om de digitale
+          dienst direct tijdens de bedenktijd
+          te laten beginnen, kunnen hiervoor
+          specifieke wettelijke regels gelden.
+        </p>
+
+        <p>
+          Een eventuele vergoeding voor reeds
+          geleverde diensten en het eventuele
+          vervallen van het herroepingsrecht
+          worden uitsluitend toegepast wanneer
+          aan de wettelijke voorwaarden
+          daarvoor is voldaan.
+        </p>
+
+        <p>
+          Je wettelijke consumentenrechten
+          worden niet uitgesloten door
+          deze voorwaarden.
+        </p>
+
+        <p>
+          Heb je problemen met je betaling,
+          is Premium niet geactiveerd of wil
+          je een terugbetaling aanvragen?
+          Neem dan contact op met ProDrop NL.
+        </p>
+
+        <p>
+          Terugbetalingsverzoeken worden
+          beoordeeld volgens de toepasselijke
+          wetgeving en de omstandigheden
+          van de aankoop.
+        </p>
+      </section>
+
+      <section>
+        <h2>10. Gebruik van ProDrop NL</h2>
+
+        <p>
+          Gebruikers dienen ProDrop NL
+          op een normale, rechtmatige en
+          respectvolle manier te gebruiken.
+        </p>
+
+        <p>
+          Het is niet toegestaan om:
+        </p>
+
+        <ul>
+          <li>
+            De bot of bijbehorende systemen
+            opzettelijk te verstoren.
+          </li>
+          <li>
+            Beveiligingsmaatregelen of
+            toegangscontroles te omzeilen.
+          </li>
+          <li>
+            Ongeautoriseerd toegang te
+            verkrijgen tot systemen of gegevens.
+          </li>
+          <li>
+            Premium-functionaliteiten
+            frauduleus te verkrijgen.
+          </li>
+          <li>
+            De dienst te gebruiken in strijd
+            met toepasselijke wetgeving of
+            Discord-regels.
+          </li>
+        </ul>
+
+        <p>
+          Bij ernstig misbruik kan toegang
+          tot ProDrop NL worden beperkt
+          of beëindigd, met behoud van
+          toepasselijke wettelijke rechten.
+        </p>
+      </section>
+
+      <section>
+        <h2>11. Externe webwinkels</h2>
+
+        <p>
+          ProDrop NL is een onafhankelijke
+          voorraadmonitoringdienst.
+        </p>
+
+        <p>
+          ProDrop NL is niet officieel
+          verbonden aan Sony, PlayStation,
+          Discord of de webwinkels die
+          worden gemonitord.
+        </p>
+
+        <p>
+          Aankopen worden rechtstreeks
+          bij externe verkopers gedaan.
+        </p>
+
+        <p>
+          De betreffende verkoper is
+          verantwoordelijk voor onder andere
+          de prijs, productbeschikbaarheid,
+          levering, garantie en retourafhandeling.
+        </p>
+
+        <p>
+          Een voorraadmelding of link vanuit
+          ProDrop NL is geen garantie dat
+          een product daadwerkelijk kan
+          worden besteld.
+        </p>
+      </section>
+
+      <section>
+        <h2>12. Beschikbaarheid en storingen</h2>
+
+        <p>
+          ProDrop NL probeert een betrouwbare
+          en goed functionerende dienst
+          aan te bieden.
+        </p>
+
+        <p>
+          Tijdelijke storingen kunnen
+          echter voorkomen door onder andere:
+        </p>
+
+        <ul>
+          <li>Onderhoud aan onze systemen.</li>
+          <li>Storingen bij Discord.</li>
+          <li>Problemen met hosting of internet.</li>
+          <li>Wijzigingen aan externe webwinkels.</li>
+          <li>Beveiliging en toegangsbeperkingen.</li>
+          <li>Andere technische omstandigheden.</li>
+        </ul>
+
+        <p>
+          Wij kunnen geen ononderbroken
+          beschikbaarheid of foutloze
+          werking garanderen.
+        </p>
+
+        <p>
+          Dit doet geen afbreuk aan
+          rechten die gebruikers op grond
+          van toepasselijke wetgeving hebben.
+        </p>
+      </section>
+
+      <section>
+        <h2>13. Privacy en persoonsgegevens</h2>
+
+        <p>
+          ProDrop NL verwerkt bepaalde
+          gegevens die noodzakelijk
+          kunnen zijn voor het functioneren
+          van de dienst.
+        </p>
+
+        <p>
+          Hieronder kunnen Discord-identificatiegegevens,
+          gebruikersinstellingen en relevante
+          betalings- en toegangsgegevens vallen.
+        </p>
+
+        <p>
+          Informatie over welke gegevens
+          worden verwerkt, waarom deze nodig
+          zijn en welke privacyrechten
+          je hebt, is beschikbaar in
+          ons privacybeleid.
+        </p>
+
+        <p>
+          <a href="privacy.html">
+            Bekijk het privacybeleid
+          </a>
+        </p>
+      </section>
+
+      <section>
+        <h2>14. Intellectueel eigendom</h2>
+
+        <p>
+          De eigen software, teksten,
+          ontwerpen en overige oorspronkelijke
+          onderdelen van ProDrop NL zijn,
+          voor zover toepasselijk, beschermd
+          door intellectuele-eigendomsrechten.
+        </p>
+
+        <p>
+          Merknamen en productnamen van
+          derden blijven eigendom van
+          hun respectieve rechthebbenden.
+        </p>
+      </section>
+
+      <section>
+        <h2>15. Aansprakelijkheid</h2>
+
+        <p>
+          ProDrop NL probeert correcte
+          informatie en betrouwbare
+          functionaliteiten aan te bieden.
+        </p>
+
+        <p>
+          Voorraadmeldingen zijn
+          informatief en vormen geen
+          aankoopgarantie.
+        </p>
+
+        <p>
+          ProDrop NL is niet de verkoper
+          van producten waarnaar meldingen
+          verwijzen.
+        </p>
+
+        <p>
+          Voor zover wettelijk toegestaan
+          is ProDrop NL niet aansprakelijk
+          voor schade die uitsluitend
+          ontstaat door onjuiste
+          voorraad- of prijsinformatie
+          van externe partijen.
+        </p>
+
+        <p>
+          Deze bepaling beperkt geen
+          aansprakelijkheid die volgens
+          toepasselijke wetgeving
+          niet kan worden uitgesloten.
+        </p>
+      </section>
+
+      <section>
+        <h2>16. Wijzigingen aan de dienst</h2>
+
+        <p>
+          ProDrop NL kan functionaliteiten
+          verbeteren, aanpassen of toevoegen.
+        </p>
+
+        <p>
+          Bij wezenlijke wijzigingen
+          die gevolgen hebben voor
+          betaalde Premium-functionaliteiten,
+          zullen gebruikers waar nodig
+          worden geïnformeerd.
+        </p>
+
+        <p>
+          Bestaande wettelijke rechten
+          en verplichtingen blijven
+          van toepassing.
+        </p>
+      </section>
+
+      <section>
+        <h2>17. Wijzigingen van voorwaarden</h2>
+
+        <p>
+          Deze servicevoorwaarden kunnen
+          worden aangepast wanneer de
+          dienst, betaalmethoden of
+          toepasselijke wetgeving wijzigen.
+        </p>
+
+        <p>
+          De meest actuele versie
+          wordt gepubliceerd op deze pagina.
+        </p>
+
+        <p>
+          Wanneer een wijziging dit wettelijk
+          vereist, zullen gebruikers
+          vooraf worden geïnformeerd.
+        </p>
+      </section>
+
+      <section>
+        <h2>18. Contact</h2>
+
+        <p>
+          Voor vragen over ProDrop NL,
+          Premium, betalingen, klachten
+          of deze voorwaarden kun je
+          contact opnemen via:
+        </p>
+
+        <p>
+          E-mail:
+          <strong>[JOUW-E-MAILADRES]</strong>
+        </p>
+
+        <p class="notice">
+          Vermeld bij betalingsvragen
+          bij voorkeur je Discord-gebruikersnaam
+          en, indien beschikbaar, het
+          PayPal-transactienummer.
+          Deel nooit je wachtwoord.
+        </p>
+      </section>
+
+      <section>
+        <h2>19. Toepasselijk recht</h2>
+
+        <p>
+          Op deze voorwaarden is,
+          voor zover wettelijk toegestaan,
+          Nederlands recht van toepassing.
+        </p>
+
+        <p>
+          Dwingendrechtelijke
+          consumentenbescherming
+          blijft altijd van kracht.
+        </p>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>
+        © 2026 ProDrop NL.
+        Alle rechten voorbehouden.
+      </p>
+
+      <p>
+        Laatst bijgewerkt: 5 november 2026
+      </p>
+
+      <p>
+        <a href="index.html">Overzicht</a>
+        ·
+        <a href="terms.html">Servicevoorwaarden</a>
+        ·
+        <a href="privacy.html">Privacybeleid</a>
+      </p>
+    </footer>
+
+  </div>
 </body>
 </html>
